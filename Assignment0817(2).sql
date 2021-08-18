@@ -276,7 +276,7 @@ ORDER BY 1
 --25  	Displays pairs of employees who have the same job title.
 SELECT e1.FirstName + ' ' + e1.LastName as Employee1, e2.FirstName + ' ' + e2.LastName as Employee2
 FROM Employees e1 join Employees e2 on
-( e1.Title = e2.Title and e1.EmployeeID != e2.EmployeeID )
+( e1.Title = e2.Title and e1.EmployeeID < e2.EmployeeID )
 
 --26.	Display all the Managers who have more than 2 employees reporting to them.
 
